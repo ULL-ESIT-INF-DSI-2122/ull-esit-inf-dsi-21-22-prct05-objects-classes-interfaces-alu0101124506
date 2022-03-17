@@ -15,5 +15,8 @@ export class Hexadecimal {
         return ("0x" + this.hexa);
     }
 
-
+    valueOfHex(): number{
+        //this.num = parseInt(this.hexa, 16);
+        return this.num;
+    }
 }
