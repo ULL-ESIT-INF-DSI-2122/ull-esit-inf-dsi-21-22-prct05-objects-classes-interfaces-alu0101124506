@@ -10,13 +10,19 @@ export class Hexadecimal {
         this.num = int;
     }
 
-    toStringHex(): string{
-        this.hexa = this.num.toString(16);
+    toStringHex(aux: number = this.num): string{
+        this.hexa = aux.toString(16);
         return ("0x" + this.hexa);
     }
 
     valueOfHex(): number{
-        //this.num = parseInt(this.hexa, 16);
         return this.num;
+    }
+
+    add(hexa2: Hexadecimal): Hexadecimal{
+        let aux: number = hexa2.valueOfHex();
+        let result = new Hexadecimal(aux + this.num);
+        result.hexa = this.toStringHex(result.num);
+        return result;
     }
 }
