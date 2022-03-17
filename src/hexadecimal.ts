@@ -1,6 +1,3 @@
-//let number = 38;
-//let hexStr = number.toString(16);
-//console.log("0x" + hexStr);
 
 export class Hexadecimal {
     public hexa: string = "";
@@ -33,5 +30,10 @@ export class Hexadecimal {
         result.hexa = this.toStringHex(result.num);
         return result;
         
+    }
+
+    parseHex(hexa2: string): number{
+        let newNum = parseInt(hexa2);
+        return newNum;
     }
 }

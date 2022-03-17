@@ -28,5 +28,9 @@ describe('Hexadecimal', () => {
 
     it('Restar 2 haxadecimales (hexadecimal)', () =>{
         expect(myFirstHexValue.substract(mySecondHexValue).toStringHex()).to.be.eql("Error: numero negativo");
-    })
+    });
+
+    it('Parse de hexadecimal a decimal', () =>{
+        expect(new Hexadecimal(38).parseHex("0x26")).to.be.eql(38);
+    });
 });
