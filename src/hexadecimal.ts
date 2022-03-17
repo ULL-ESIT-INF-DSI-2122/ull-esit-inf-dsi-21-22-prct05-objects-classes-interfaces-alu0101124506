@@ -11,7 +11,8 @@ export class Hexadecimal {
     }
 
     toStringHex(aux: number = this.num): string{
-        this.hexa = aux.toString(16);
+        this.hexa = Math.abs(aux).toString(16);
+        if (aux < 0) return ("Error: numero negativo")
         return ("0x" + this.hexa);
     }
 
@@ -24,5 +25,13 @@ export class Hexadecimal {
         let result = new Hexadecimal(aux + this.num);
         result.hexa = this.toStringHex(result.num);
         return result;
+    }
+
+    substract(hexa2: Hexadecimal): Hexadecimal{
+        let aux: number = hexa2.valueOfHex();
+        let result = new Hexadecimal(aux - this.num);
+        result.hexa = this.toStringHex(result.num);
+        return result;
+        
     }
 }
