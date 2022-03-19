@@ -33,4 +33,8 @@ describe('Hexadecimal', () => {
     it('Parse de hexadecimal a decimal', () =>{
         expect(new Hexadecimal(38).parseHex("0x26")).to.be.eql(38);
     });
+
+    it('Restar 2 haxadecimales (hexadecimal)', () =>{
+        expect(mySecondHexValue.substract(myFirstHexValue).toStringHex()).to.be.eql("0x8");
+    });
 });
